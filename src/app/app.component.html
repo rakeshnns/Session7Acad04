@@ -1,0 +1,16 @@
+<div>
+  <h3>Family Details</h3>
+<!-- Table Header -->  
+<tr>
+  <th>Array Index</th>
+  <th>Name</th>
+  <th>Age</th>
+</tr>
+<!-- *ngFor loop for the number of elements in array and ngStyle calling function 
+to get style according to the index reminders to the DOM -->
+<tr  *ngFor="let user of Users; let i = index" [ngStyle]="getStyle(i)">
+  <td>{{i}}</td>
+  <td>{{user.name}}</td>
+  <td>{{user.Age}}</td>
+</tr>
+</div>
